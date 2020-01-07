@@ -24,6 +24,7 @@ import './ContactCard.css';
 function App() {
   return (
     <div className="App">
+      <Decrement value="100"></Decrement>
       <ContactCard work="917-754-0000" mobile="718-646-8722" email="lippidy@fvl.org" name="Gautham Divakar"></ContactCard>
       <ContactCard work="917-754-0000" mobile="718-646-8722" email="lippidy@fvl.org" name="Harry Wu"></ContactCard>
       <ContactCard work="917-754-0000" mobile="718-646-8722" email="lippidy@fvl.org" name="Paul Mooney"></ContactCard>
@@ -60,5 +61,21 @@ ContactCard.propTypes = {
   work: PropTypes.string,
   mobile: PropTypes.string.isRequired,
 };
+
+
+class Decrement extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: props.value};
+  }
+  render() {
+    return (
+      <div className="card">
+        <span>{this.state.value}</span>
+        <button>Decrement</button>
+      </div>
+    );
+  }
+}
 
 export default App;
