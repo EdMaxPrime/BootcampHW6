@@ -25,9 +25,9 @@ function App() {
   return (
     <div className="App">
       <Decrement value="100"></Decrement>
-      <ContactCard work="917-754-0000" mobile="718-646-8722" email="lippidy@fvl.org" name="Gautham Divakar"></ContactCard>
-      <ContactCard work="917-754-0000" mobile="718-646-8722" email="lippidy@fvl.org" name="Harry Wu"></ContactCard>
-      <ContactCard work="917-754-0000" mobile="718-646-8722" email="lippidy@fvl.org" name="Paul Mooney"></ContactCard>
+      <ContactCard work="917-754-1337" mobile="718-646-8722" email="lippidy@fvl.org" name="Gautham Divakar"></ContactCard>
+      <ContactCard work="902-109-0210" mobile="030-646-8722" email="lippidy@fvl.org" name="Harry Wu"></ContactCard>
+      <ContactCard                     mobile="123-456-7890" email="lippidy@fvl.org" name="Paul Mooney"></ContactCard>
     </div>
   );
 }
@@ -67,12 +67,16 @@ class Decrement extends Component {
   constructor(props) {
     super(props);
     this.state = {value: props.value};
+    this.decrement = this.decrement.bind(this);
+  }
+  decrement(val) {
+    this.setState({value: this.state.value - 1});
   }
   render() {
     return (
-      <div className="card">
+      <div className="bigBox">
         <span>{this.state.value}</span>
-        <button>Decrement</button>
+        <button onClick={this.decrement}>Decrement</button>
       </div>
     );
   }

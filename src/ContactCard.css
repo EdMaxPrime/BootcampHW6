@@ -1,6 +1,6 @@
 .card {
 	margin: 0.2in 1in;
-	background-color: #F1BF98;
+	background-color: #EEE5E9;
 	color: black;
 	text-align: left;
 }
@@ -20,10 +20,6 @@
 	padding-bottom: 10px;
 }
 
-.card .body:hover {
-	background-color: #EEE5E9;
-}
-
 .field-name {
 	display: block;
 	color: #555;
@@ -31,4 +27,20 @@
 
 .field-value {
 	display: block;
+}
+
+.bigBox {
+	padding: 10px 10px;
+	background-color: #8D0801;
+	color: #F4D58D;
+}
+
+.bigBox span {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.bigBox button {
+	background-color: #708D81;
 }
