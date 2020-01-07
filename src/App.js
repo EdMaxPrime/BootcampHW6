@@ -71,6 +71,7 @@ class Decrement extends Component {
     super(props);
     this.state = {value: props.value};
     this.decrement = this.decrement.bind(this);
+    this.increment = this.increment.bind(this);
   }
   decrement() {
     if(this.state.value > 0) {
@@ -79,11 +80,15 @@ class Decrement extends Component {
       alert("Number can't be negative.");
     }
   }
+  increment() {
+    this.setState({value: this.state.value + 1});
+  }
   render() {
     return (
       <div className="bigBox">
         <span>{this.state.value}</span>
         <button onClick={this.decrement}>Decrement</button>
+        <button onClick={this.increment}>Increment</button>
       </div>
     );
   }
